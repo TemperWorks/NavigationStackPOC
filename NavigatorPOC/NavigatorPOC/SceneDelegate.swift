@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         AppEnvironment.Current.navigator.configure(with: window)
         Task {
-            let navigation = await OnboardingFlow().getFirstNavigation()
+            let navigation = await OnboardingFlow.development.getFirstNavigation()
             AppEnvironment.Current.navigator.handle(navigation: navigation)
         }
         

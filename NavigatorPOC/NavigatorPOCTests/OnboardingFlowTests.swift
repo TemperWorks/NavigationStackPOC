@@ -17,8 +17,7 @@ class OnboardingFlowTests: XCTestCase {
     func test_OnboardingViewModel_WhenOnboardingCompleted_navigatesToShiftOverviewTabController() {
         let navigatorSpy = NavigatorSpy()
         AppEnvironment.Current.navigator = navigatorSpy
-        OnboardingFlow().simulateCompletion()
-        let viewModel = OnboardingViewModel()
+        let viewModel = OnboardingViewModel(onboardingFlow: .alwaysCompleted)
         viewModel.didTapNext.send(())
         
         assertSnapshot(matching: navigatorSpy.handledNavigation, as: .dump)

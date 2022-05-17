@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 
-protocol FlowManager {
-    func getNextNavigation() async -> Navigation
-    func getFirstNavigation() async -> Navigation
-}
-
-class OnboardingFlow: FlowManager {
+public struct OnboardingFlow {
+    
+    var getMissingStep: () async -> String?
+    
+    public init(getMissingStep: @escaping () async -> String?) {
+        self.getMissingStep = getMissingStep
+    }
     
     // This is to mock the service behaviour
     private static var missingSteps = ["email", "password", "phone", "id_verification"]
@@ -24,15 +25,6 @@ class OnboardingFlow: FlowManager {
     
     func simulateCompletion() {
         OnboardingFlow.missingSteps.removeAll()
-    }
-    
-    private func getMissingStep() async -> String? {
-        if let step = OnboardingFlow.missingSteps.first {
-            OnboardingFlow.missingSteps.removeFirst()
-            return step
-        }
-        
-        return nil
     }
     
     private func getNextScreen() async -> Screen? {
@@ -86,4 +78,25 @@ class OnboardingFlow: FlowManager {
         
         return .push(nextScreen)
     }
+}
+
+extension OnboardingFlow {
+    
+    public static let live = Self {
+        return "Something returned from backend"
+    }
+    
+    public static let development = Self {
+        if let step = OnboardingFlow.missingSteps.first {
+            OnboardingFlow.missingSteps.removeFirst()
+            return step
+        }
+        
+        return nil
+    }
+    
+    public static let alwaysCompleted = Self {
+        return nil
+    }
+
 }

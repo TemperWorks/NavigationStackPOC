@@ -13,11 +13,13 @@ import Combine
 class OnboardingViewModel {
     var didTapNext = PassthroughSubject<Void, Never>()
     private var subscriptions = Set<AnyCancellable>()
+    private var onboardingFlow: OnboardingFlow
     
-    init() {
+    init(onboardingFlow: OnboardingFlow = .development) {
+        self.onboardingFlow = onboardingFlow
+        
         didTapNext.sink { _ in
             Task {
-                let onboardingFlow = OnboardingFlow()
                 let nextNavigation = await onboardingFlow.getNextNavigation()
                 await AppEnvironment.Current.navigator.handle(navigation: nextNavigation)
             }
@@ -144,10 +146,12 @@ class ProfileViewModel {
     var didTapLogout = PassthroughSubject<Int, Never>()
     
     private var subscriptions = Set<AnyCancellable>()
+    private var onboardingFlow: OnboardingFlow
     
-    init() {
+    init(onboardingFlow: OnboardingFlow = .development) {
+        self.onboardingFlow = onboardingFlow
+        
         didTapLogout.sink { _ in
-            let onboardingFlow = OnboardingFlow()
             onboardingFlow.simulateLogout()
             Task {
                 let navigation = await onboardingFlow.getFirstNavigation()
