@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum Navigation {
+public enum Navigation {
     case root(Screen)
     case section(Section)
     case push(Screen)
@@ -19,13 +19,13 @@ enum Navigation {
     )
 }
 
-enum Section: Int {
+public enum Section: Int {
     case home
     case messages
     case notifications
     case profile
 }
 
-struct Screen {
+public struct Screen {
     let viewController: @MainActor () -> UIViewController
 }

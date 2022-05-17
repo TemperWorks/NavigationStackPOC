@@ -10,6 +10,7 @@ import UIKit
 
 protocol FlowManager {
     func getNextNavigation() async -> Navigation
+    func getFirstNavigation() async -> Navigation
 }
 
 class OnboardingFlow: FlowManager {
@@ -19,6 +20,10 @@ class OnboardingFlow: FlowManager {
     
     func simulateLogout() {
         OnboardingFlow.missingSteps = ["email", "password", "phone", "id_verification"]
+    }
+    
+    func simulateCompletion() {
+        OnboardingFlow.missingSteps.removeAll()
     }
     
     private func getMissingStep() async -> String? {

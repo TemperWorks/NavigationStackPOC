@@ -8,6 +8,15 @@
         "revision" : "f222cbdf325885926566172f6f5f06af95473158",
         "version" : "5.6.0"
       }
+    },
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-snapshot-testing.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ad2c83170e82954d9504e4db205c43a3f493bc55"
+      }
     }
   ],
   "version" : 2

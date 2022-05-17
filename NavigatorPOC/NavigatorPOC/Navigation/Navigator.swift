@@ -8,18 +8,18 @@
 import Foundation
 import UIKit
 
-public class Navigator {
+open class Navigator {
     
     public weak var window: UIWindow?
     
     public init() {}
     
-    func configure(with window: UIWindow) {
+    public func configure(with window: UIWindow) {
         self.window = window
     }
     
     @MainActor
-    func handle(navigation: Navigation, animated: Bool = true) {
+    open func handle(navigation: Navigation, animated: Bool = true) {
         guard let window = window else {
             return
         }
