@@ -21,10 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         
         AppEnvironment.Current.navigator.configure(with: window)
-        Task {
-            let navigation = await OnboardingFlow.development.getFirstNavigation()
-            AppEnvironment.Current.navigator.handle(navigation: navigation)
-        }
+        
+        let navigation = OnboardingFlow.development.getFirstNavigation()
+        AppEnvironment.Current.navigator.handle(navigation: navigation)
         
     }
 

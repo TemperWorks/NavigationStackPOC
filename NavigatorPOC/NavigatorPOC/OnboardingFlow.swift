@@ -10,9 +10,9 @@ import UIKit
 
 public struct OnboardingFlow {
     
-    var getMissingStep: () async -> String?
+    var getMissingStep: () -> String?
     
-    public init(getMissingStep: @escaping () async -> String?) {
+    public init(getMissingStep: @escaping () -> String?) {
         self.getMissingStep = getMissingStep
     }
     
@@ -27,8 +27,8 @@ public struct OnboardingFlow {
         OnboardingFlow.missingSteps.removeAll()
     }
     
-    private func getNextScreen() async -> Screen? {
-        let step = await getMissingStep()
+    private func getNextScreen() -> Screen? {
+        let step =  getMissingStep()
         
         switch step {
         case "email":
@@ -50,8 +50,8 @@ public struct OnboardingFlow {
     /// Picks the next screen based on missing steps and embeds it in a `UINavigationViewController`
     ///
     /// - Returns: The first `Navigation` object for this flow
-    func getFirstNavigation() async -> Navigation {
-        guard let nextScreen = await getNextScreen() else {
+    func getFirstNavigation() -> Navigation {
+        guard let nextScreen = getNextScreen() else {
             let screen = Screen.shiftOverviewTabBar()
             return .root(screen)
         }
@@ -70,8 +70,8 @@ public struct OnboardingFlow {
     /// - Returns the next `Navigation` for this flow
     ///     * Push for onboarding screens
     ///     * Roor for the shift overview
-    func getNextNavigation() async -> Navigation {
-        guard let nextScreen = await getNextScreen() else {
+    func getNextNavigation() -> Navigation {
+        guard let nextScreen =  getNextScreen() else {
             let screen = Screen.shiftOverviewTabBar()
             return .root(screen)
         }

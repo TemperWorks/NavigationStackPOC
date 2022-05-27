@@ -19,10 +19,8 @@ class OnboardingViewModel {
         self.onboardingFlow = onboardingFlow
         
         didTapNext.sink { _ in
-            Task {
-                let nextNavigation = await onboardingFlow.getNextNavigation()
-                await AppEnvironment.Current.navigator.handle(navigation: nextNavigation)
-            }
+            let nextNavigation = onboardingFlow.getNextNavigation()
+            AppEnvironment.Current.navigator.handle(navigation: nextNavigation)
         }.store(in: &subscriptions)
     }
 }
@@ -89,9 +87,7 @@ class ShiftOverviewViewModel {
     init() {
         didTapShowJobAtIndex.sink { _ in
             let screen = Screen.jobDetail(id: "fakeId").embededInNavigationController()
-            Task {
-                await AppEnvironment.Current.navigator.handle(navigation: .modal(screen))
-            }
+            AppEnvironment.Current.navigator.handle(navigation: .modal(screen))
         }.store(in: &subscriptions)
     }
 }
@@ -153,10 +149,8 @@ class ProfileViewModel {
         
         didTapLogout.sink { _ in
             onboardingFlow.simulateLogout()
-            Task {
-                let navigation = await onboardingFlow.getFirstNavigation()
-                await AppEnvironment.Current.navigator.handle(navigation: navigation)
-            }
+            let navigation = onboardingFlow.getFirstNavigation()
+            AppEnvironment.Current.navigator.handle(navigation: navigation)
         }.store(in: &subscriptions)
     }
 }
@@ -217,9 +211,7 @@ class JobDetailViewModel {
         didTapApply.sink { _ in
             let screen = Screen.shiftApplicationSkills(shiftId: "fakeShiftId")
                             .embededInNavigationController()
-            Task {
-                await AppEnvironment.Current.navigator.handle(navigation:.modal(screen))
-            }
+            AppEnvironment.Current.navigator.handle(navigation:.modal(screen))
         }.store(in: &subscriptions)
     }
 }
@@ -279,9 +271,7 @@ class ShiftApplicationVATViewModel {
         self.shiftId = shiftId
         didTapApply.sink { _ in
             let screen = Screen.shiftOverviewTabBar()
-            Task {
-                await AppEnvironment.Current.navigator.handle(navigation: .root(screen))
-            }
+            AppEnvironment.Current.navigator.handle(navigation: .root(screen))
         }.store(in: &subscriptions)
     }
 }
@@ -340,9 +330,7 @@ class ShiftApplicationSkillsViewModel {
         self.shiftId = shiftId
         didTapApply.sink { _ in
             let screen = Screen.shiftApplicationVAT(shiftId: shiftId)
-            Task {
-                await AppEnvironment.Current.navigator.handle(navigation:.push(screen))
-            }
+            AppEnvironment.Current.navigator.handle(navigation:.push(screen))
         }.store(in: &subscriptions)
     }
 }

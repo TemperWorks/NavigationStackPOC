@@ -18,16 +18,15 @@ open class Navigator {
         self.window = window
     }
     
-    @MainActor
     open func handle(navigation: Navigation, animated: Bool = true) {
         guard let window = window else {
             return
         }
-        
+
         switch navigation {
         case .section(let section):
             window.tabBarController?.selectedIndex = section.rawValue
-            
+
         case .modal(let screen, let presentationStyle, let completion):
             let vc = screen.viewController()
             vc.modalPresentationStyle = presentationStyle
@@ -36,7 +35,7 @@ open class Navigator {
                 animated: animated,
                 completion: completion
             )
-            
+
         case .push(let screen):
             let vc = screen.viewController()
             window.currentNavigationController?.pushViewController(
@@ -49,3 +48,4 @@ open class Navigator {
         }
     }
 }
+

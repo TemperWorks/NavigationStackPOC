@@ -27,5 +27,5 @@ public enum Section: Int {
 }
 
 public struct Screen {
-    let viewController: @MainActor () -> UIViewController
+    let viewController: () -> UIViewController
 }
