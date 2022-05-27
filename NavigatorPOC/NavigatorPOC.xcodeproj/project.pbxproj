@@ -14,7 +14,6 @@
 		5F158838282E896C00FBF2EA /* NavigatorPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F158837282E896C00FBF2EA /* NavigatorPOCTests.swift */; };
 		5F158842282E896C00FBF2EA /* NavigatorPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F158841282E896C00FBF2EA /* NavigatorPOCUITests.swift */; };
 		5F158844282E896C00FBF2EA /* NavigatorPOCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F158843282E896C00FBF2EA /* NavigatorPOCUITestsLaunchTests.swift */; };
-		5F15885D282F7E6800FBF2EA /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15885C282F7E6800FBF2EA /* ViewControllers.swift */; };
 		5F158860282F7EF200FBF2EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F15885F282F7EF200FBF2EA /* SnapKit */; };
 		5F158865282F9C6A00FBF2EA /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F158864282F9C6A00FBF2EA /* Navigation.swift */; };
 		5F158867282F9DC500FBF2EA /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F158866282F9DC500FBF2EA /* Navigator.swift */; };
@@ -26,6 +25,18 @@
 		5FB2C4962830FA6F00A87AA2 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */; };
 		5FB2C4982830FA8D00A87AA2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C4972830FA8D00A87AA2 /* Environment.swift */; };
 		5FB2C49A283119EA00A87AA2 /* Screen+ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */; };
+		C2DA9C20284125A300325D5D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C1F284125A300325D5D /* OnboardingViewController.swift */; };
+		C2DA9C22284125B700325D5D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C21284125B700325D5D /* OnboardingViewModel.swift */; };
+		C2DA9C252841267D00325D5D /* ShiftOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C242841267D00325D5D /* ShiftOverviewViewController.swift */; };
+		C2DA9C272841268A00325D5D /* ShiftOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C262841268A00325D5D /* ShiftOverviewViewModel.swift */; };
+		C2DA9C2A284126CB00325D5D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C29284126CB00325D5D /* ProfileViewModel.swift */; };
+		C2DA9C2C284126D500325D5D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C2B284126D500325D5D /* ProfileViewController.swift */; };
+		C2DA9C2F2841274100325D5D /* JobDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C2E2841274100325D5D /* JobDetailViewModel.swift */; };
+		C2DA9C312841275100325D5D /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C302841275100325D5D /* JobDetailViewController.swift */; };
+		C2DA9C342841279D00325D5D /* ShiftApplicationVATViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C332841279D00325D5D /* ShiftApplicationVATViewModel.swift */; };
+		C2DA9C36284127A600325D5D /* ShiftApplicationVATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C35284127A600325D5D /* ShiftApplicationVATViewController.swift */; };
+		C2DA9C39284127E300325D5D /* ShiftApplicationSkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */; };
+		C2DA9C3B284127ED00325D5D /* ShiftApplicationSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +68,6 @@
 		5F15883D282E896C00FBF2EA /* NavigatorPOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigatorPOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F158841282E896C00FBF2EA /* NavigatorPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorPOCUITests.swift; sourceTree = "<group>"; };
 		5F158843282E896C00FBF2EA /* NavigatorPOCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorPOCUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5F15885C282F7E6800FBF2EA /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		5F158864282F9C6A00FBF2EA /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		5F158866282F9DC500FBF2EA /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		5F43AA0728325CD800851279 /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
@@ -67,6 +77,18 @@
 		5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		5FB2C4972830FA8D00A87AA2 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Screen+ViewControllers.swift"; sourceTree = "<group>"; };
+		C2DA9C1F284125A300325D5D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		C2DA9C21284125B700325D5D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		C2DA9C242841267D00325D5D /* ShiftOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftOverviewViewController.swift; sourceTree = "<group>"; };
+		C2DA9C262841268A00325D5D /* ShiftOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftOverviewViewModel.swift; sourceTree = "<group>"; };
+		C2DA9C29284126CB00325D5D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C2DA9C2B284126D500325D5D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C2DA9C2E2841274100325D5D /* JobDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewModel.swift; sourceTree = "<group>"; };
+		C2DA9C302841275100325D5D /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		C2DA9C332841279D00325D5D /* ShiftApplicationVATViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationVATViewModel.swift; sourceTree = "<group>"; };
+		C2DA9C35284127A600325D5D /* ShiftApplicationVATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationVATViewController.swift; sourceTree = "<group>"; };
+		C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsViewModel.swift; sourceTree = "<group>"; };
+		C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +141,7 @@
 		5F15881F282E896A00FBF2EA /* NavigatorPOC */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C1D2841257000325D5D /* Screens */,
 				C2DA9C1C2841244000325D5D /* Environment */,
 				5F158863282F9C6000FBF2EA /* Navigation */,
 				5F158820282E896A00FBF2EA /* AppDelegate.swift */,
@@ -126,7 +149,6 @@
 				5F158829282E896C00FBF2EA /* Assets.xcassets */,
 				5F15882B282E896C00FBF2EA /* LaunchScreen.storyboard */,
 				5F15882E282E896C00FBF2EA /* Info.plist */,
-				5F15885C282F7E6800FBF2EA /* ViewControllers.swift */,
 				5FB2C4932830F40B00A87AA2 /* ViewContext.swift */,
 				5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */,
 				5F43AA0728325CD800851279 /* OnboardingFlow.swift */,
@@ -169,6 +191,73 @@
 				5FB2C4972830FA8D00A87AA2 /* Environment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		C2DA9C1D2841257000325D5D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C2D2841272700325D5D /* JobDetail */,
+				C2DA9C1E2841257F00325D5D /* Onboarding */,
+				C2DA9C28284126BA00325D5D /* Profile */,
+				C2DA9C37284127D000325D5D /* ShiftApplicationSkills */,
+				C2DA9C322841278600325D5D /* ShiftApplicationVAT */,
+				C2DA9C232841265E00325D5D /* ShiftOverview */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C2DA9C1E2841257F00325D5D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C1F284125A300325D5D /* OnboardingViewController.swift */,
+				C2DA9C21284125B700325D5D /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C2DA9C232841265E00325D5D /* ShiftOverview */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C242841267D00325D5D /* ShiftOverviewViewController.swift */,
+				C2DA9C262841268A00325D5D /* ShiftOverviewViewModel.swift */,
+			);
+			path = ShiftOverview;
+			sourceTree = "<group>";
+		};
+		C2DA9C28284126BA00325D5D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C2B284126D500325D5D /* ProfileViewController.swift */,
+				C2DA9C29284126CB00325D5D /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C2DA9C2D2841272700325D5D /* JobDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C302841275100325D5D /* JobDetailViewController.swift */,
+				C2DA9C2E2841274100325D5D /* JobDetailViewModel.swift */,
+			);
+			path = JobDetail;
+			sourceTree = "<group>";
+		};
+		C2DA9C322841278600325D5D /* ShiftApplicationVAT */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C35284127A600325D5D /* ShiftApplicationVATViewController.swift */,
+				C2DA9C332841279D00325D5D /* ShiftApplicationVATViewModel.swift */,
+			);
+			path = ShiftApplicationVAT;
+			sourceTree = "<group>";
+		};
+		C2DA9C37284127D000325D5D /* ShiftApplicationSkills */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */,
+				C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */,
+			);
+			path = ShiftApplicationSkills;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,14 +401,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FB2C4962830FA6F00A87AA2 /* AppEnvironment.swift in Sources */,
+				C2DA9C252841267D00325D5D /* ShiftOverviewViewController.swift in Sources */,
+				C2DA9C39284127E300325D5D /* ShiftApplicationSkillsViewModel.swift in Sources */,
+				C2DA9C2F2841274100325D5D /* JobDetailViewModel.swift in Sources */,
 				5FB2C4982830FA8D00A87AA2 /* Environment.swift in Sources */,
-				5F15885D282F7E6800FBF2EA /* ViewControllers.swift in Sources */,
+				C2DA9C3B284127ED00325D5D /* ShiftApplicationSkillsViewController.swift in Sources */,
 				5F158867282F9DC500FBF2EA /* Navigator.swift in Sources */,
 				5F158865282F9C6A00FBF2EA /* Navigation.swift in Sources */,
+				C2DA9C312841275100325D5D /* JobDetailViewController.swift in Sources */,
+				C2DA9C2C284126D500325D5D /* ProfileViewController.swift in Sources */,
 				5F158821282E896A00FBF2EA /* AppDelegate.swift in Sources */,
 				5FB2C4942830F40B00A87AA2 /* ViewContext.swift in Sources */,
+				C2DA9C272841268A00325D5D /* ShiftOverviewViewModel.swift in Sources */,
+				C2DA9C2A284126CB00325D5D /* ProfileViewModel.swift in Sources */,
+				C2DA9C22284125B700325D5D /* OnboardingViewModel.swift in Sources */,
+				C2DA9C36284127A600325D5D /* ShiftApplicationVATViewController.swift in Sources */,
 				5F158823282E896A00FBF2EA /* SceneDelegate.swift in Sources */,
+				C2DA9C342841279D00325D5D /* ShiftApplicationVATViewModel.swift in Sources */,
 				5F43AA0828325CD800851279 /* OnboardingFlow.swift in Sources */,
+				C2DA9C20284125A300325D5D /* OnboardingViewController.swift in Sources */,
 				5FB2C49A283119EA00A87AA2 /* Screen+ViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
