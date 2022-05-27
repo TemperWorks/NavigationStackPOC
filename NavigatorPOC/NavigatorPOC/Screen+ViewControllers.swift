@@ -89,13 +89,3 @@ extension Screen {
         }
     }
 }
-
-extension Screen {
-    
-    func embededInNavigationController() -> Screen {
-        return .init {
-            let vc = self.viewController()
-            return UINavigationController(rootViewController: vc)
-        }
-    }
-}

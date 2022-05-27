@@ -28,8 +28,10 @@ open class Navigator {
             case .tab(let index):
                 window.tabBarController?.selectedIndex = index
                 
-            case .modal(let screen, let presentationStyle, let completion):
-                let vc = screen.viewController()
+            case .modal(let screen, let presentationStyle, let isEmbededInNavigation, let completion):
+                
+                let vc = isEmbededInNavigation ? screen.embededInNavigationController().viewController() : screen.viewController()
+                
                 vc.modalPresentationStyle = presentationStyle
                 window.topMostViewController?.present(
                     vc,
@@ -51,3 +53,12 @@ open class Navigator {
     }
 }
 
+fileprivate extension Screen {
+    
+    func embededInNavigationController() -> Screen {
+        return .init {
+            let vc = self.viewController()
+            return UINavigationController(rootViewController: vc)
+        }
+    }
+}

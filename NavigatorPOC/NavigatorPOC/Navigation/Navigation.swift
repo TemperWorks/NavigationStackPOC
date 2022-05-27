@@ -14,7 +14,8 @@ public enum Navigation {
     case push(Screen)
     case modal(
         Screen,
-        UIModalPresentationStyle = .automatic,
+        style: UIModalPresentationStyle = .automatic,
+        isEmbededInNavigation: Bool = false,
         completion: (() -> Void)? = nil
     )
 }

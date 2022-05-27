@@ -86,8 +86,8 @@ class ShiftOverviewViewModel {
     
     init() {
         didTapShowJobAtIndex.sink { _ in
-            let screen = Screen.jobDetail(id: "fakeId").embededInNavigationController()
-            AppEnvironment.Current.navigator.handle(navigation: .modal(screen))
+            let screen = Screen.jobDetail(id: "fakeId")
+            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbededInNavigation: true))
         }.store(in: &subscriptions)
     }
 }
@@ -210,8 +210,7 @@ class JobDetailViewModel {
         self.jobId = jobId
         didTapApply.sink { _ in
             let screen = Screen.shiftApplicationSkills(shiftId: "fakeShiftId")
-                            .embededInNavigationController()
-            AppEnvironment.Current.navigator.handle(navigation:.modal(screen))
+            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbededInNavigation: true))
         }.store(in: &subscriptions)
     }
 }
