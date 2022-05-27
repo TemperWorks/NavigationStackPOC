@@ -25,8 +25,8 @@ open class Navigator {
         
         DispatchQueue.main.async {
             switch navigation {
-            case .section(let section):
-                window.tabBarController?.selectedIndex = section.rawValue
+            case .tab(let index):
+                window.tabBarController?.selectedIndex = index
                 
             case .modal(let screen, let presentationStyle, let completion):
                 let vc = screen.viewController()
