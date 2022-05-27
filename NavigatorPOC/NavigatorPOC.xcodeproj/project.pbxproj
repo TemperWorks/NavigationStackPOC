@@ -119,6 +119,7 @@
 		5F15881F282E896A00FBF2EA /* NavigatorPOC */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C1C2841244000325D5D /* Environment */,
 				5F158863282F9C6000FBF2EA /* Navigation */,
 				5F158820282E896A00FBF2EA /* AppDelegate.swift */,
 				5F158822282E896A00FBF2EA /* SceneDelegate.swift */,
@@ -127,8 +128,6 @@
 				5F15882E282E896C00FBF2EA /* Info.plist */,
 				5F15885C282F7E6800FBF2EA /* ViewControllers.swift */,
 				5FB2C4932830F40B00A87AA2 /* ViewContext.swift */,
-				5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */,
-				5FB2C4972830FA8D00A87AA2 /* Environment.swift */,
 				5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */,
 				5F43AA0728325CD800851279 /* OnboardingFlow.swift */,
 			);
@@ -161,6 +160,15 @@
 				5F158866282F9DC500FBF2EA /* Navigator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C2DA9C1C2841244000325D5D /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */,
+				5FB2C4972830FA8D00A87AA2 /* Environment.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
