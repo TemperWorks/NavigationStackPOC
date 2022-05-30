@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-open class Navigator {
+open class Navigator: ViewContex {
     
     public weak var window: UIWindow?
     
@@ -26,14 +26,14 @@ open class Navigator {
         DispatchQueue.main.async {
             switch navigation {
             case .tab(let index):
-                window.tabBarController?.selectedIndex = index
+                self.tabBarController?.selectedIndex = index
                 
             case .modal(let screen, let presentationStyle, let isEmbededInNavigation, let completion):
                 
                 let vc = isEmbededInNavigation ? screen.embededInNavigationController().viewController() : screen.viewController()
                 
                 vc.modalPresentationStyle = presentationStyle
-                window.topMostViewController?.present(
+                self.topMostViewController?.present(
                     vc,
                     animated: animated,
                     completion: completion
@@ -41,7 +41,7 @@ open class Navigator {
                 
             case .push(let screen):
                 let vc = screen.viewController()
-                window.currentNavigationController?.pushViewController(
+                self.currentNavigationController?.pushViewController(
                     vc,
                     animated: animated
                 )

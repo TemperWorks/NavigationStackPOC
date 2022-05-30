@@ -1,29 +1,36 @@
 //
-//  ViewContext.swift
+//  Navigator+ViewContex.swift
 //  NavigatorPOC
 //
-//  Created by Alejandro Luján López on 15/5/22.
+//  Created by Goktug Aral on 30/05/2022.
 //
 
 import Foundation
 import UIKit
 
+protocol ViewContex {
+    var topMostViewController: UIViewController? { get }
+    var tabBarController: UITabBarController? { get }
+    var currentNavigationController: UINavigationController? { get }
+}
 
-extension UIWindow {
+extension ViewContex where Self: Navigator {
     var topMostViewController: UIViewController? {
-        return rootViewController?.topMostViewController
+        return window?.rootViewController?.topMostViewController
     }
     
     var tabBarController: UITabBarController? {
-        return rootViewController?.tabBarController
+        return window?.rootViewController?.tabBarController
     }
     
     var currentNavigationController: UINavigationController? {
-        return rootViewController?.currentNavigationController
+        return window?.rootViewController?.currentNavigationController
     }
 }
 
-extension UIViewController {
+// MARK: - Private
+
+fileprivate extension UIViewController {
     
     var topMostViewController: UIViewController {
         if let presented = self.presentedViewController {
@@ -70,4 +77,5 @@ extension UIViewController {
         return nil
     }
 }
+
 

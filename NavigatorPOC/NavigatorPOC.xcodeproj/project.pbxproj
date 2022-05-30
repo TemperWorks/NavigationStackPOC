@@ -21,7 +21,6 @@
 		5F43AA0C2833876400851279 /* OnboardingFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F43AA0B2833876400851279 /* OnboardingFlowTests.swift */; };
 		5F43AA0E283388D200851279 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F43AA0D283388D200851279 /* NavigatorSpy.swift */; };
 		5F43AA1428338DB500851279 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 5F43AA1328338DB500851279 /* SnapshotTesting */; };
-		5FB2C4942830F40B00A87AA2 /* ViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C4932830F40B00A87AA2 /* ViewContext.swift */; };
 		5FB2C4962830FA6F00A87AA2 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */; };
 		5FB2C4982830FA8D00A87AA2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C4972830FA8D00A87AA2 /* Environment.swift */; };
 		5FB2C49A283119EA00A87AA2 /* Screen+ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */; };
@@ -37,6 +36,7 @@
 		C2DA9C36284127A600325D5D /* ShiftApplicationVATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C35284127A600325D5D /* ShiftApplicationVATViewController.swift */; };
 		C2DA9C39284127E300325D5D /* ShiftApplicationSkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */; };
 		C2DA9C3B284127ED00325D5D /* ShiftApplicationSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */; };
+		C2DA9C3D2844C66100325D5D /* Navigator+ViewContex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,6 @@
 		5F43AA0728325CD800851279 /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		5F43AA0B2833876400851279 /* OnboardingFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowTests.swift; sourceTree = "<group>"; };
 		5F43AA0D283388D200851279 /* NavigatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
-		5FB2C4932830F40B00A87AA2 /* ViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContext.swift; sourceTree = "<group>"; };
 		5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		5FB2C4972830FA8D00A87AA2 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Screen+ViewControllers.swift"; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		C2DA9C35284127A600325D5D /* ShiftApplicationVATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationVATViewController.swift; sourceTree = "<group>"; };
 		C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsViewModel.swift; sourceTree = "<group>"; };
 		C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsViewController.swift; sourceTree = "<group>"; };
+		C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigator+ViewContex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,6 @@
 				5F158829282E896C00FBF2EA /* Assets.xcassets */,
 				5F15882B282E896C00FBF2EA /* LaunchScreen.storyboard */,
 				5F15882E282E896C00FBF2EA /* Info.plist */,
-				5FB2C4932830F40B00A87AA2 /* ViewContext.swift */,
 				5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */,
 				5F43AA0728325CD800851279 /* OnboardingFlow.swift */,
 			);
@@ -180,6 +179,7 @@
 			children = (
 				5F158864282F9C6A00FBF2EA /* Navigation.swift */,
 				5F158866282F9DC500FBF2EA /* Navigator.swift */,
+				C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -401,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FB2C4962830FA6F00A87AA2 /* AppEnvironment.swift in Sources */,
+				C2DA9C3D2844C66100325D5D /* Navigator+ViewContex.swift in Sources */,
 				C2DA9C252841267D00325D5D /* ShiftOverviewViewController.swift in Sources */,
 				C2DA9C39284127E300325D5D /* ShiftApplicationSkillsViewModel.swift in Sources */,
 				C2DA9C2F2841274100325D5D /* JobDetailViewModel.swift in Sources */,
@@ -411,7 +412,6 @@
 				C2DA9C312841275100325D5D /* JobDetailViewController.swift in Sources */,
 				C2DA9C2C284126D500325D5D /* ProfileViewController.swift in Sources */,
 				5F158821282E896A00FBF2EA /* AppDelegate.swift in Sources */,
-				5FB2C4942830F40B00A87AA2 /* ViewContext.swift in Sources */,
 				C2DA9C272841268A00325D5D /* ShiftOverviewViewModel.swift in Sources */,
 				C2DA9C2A284126CB00325D5D /* ProfileViewModel.swift in Sources */,
 				C2DA9C22284125B700325D5D /* OnboardingViewModel.swift in Sources */,
