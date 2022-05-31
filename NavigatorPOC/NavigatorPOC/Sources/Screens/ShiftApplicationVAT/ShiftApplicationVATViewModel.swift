@@ -11,6 +11,7 @@ import Combine
 class ShiftApplicationVATViewModel {
     var shiftId: String
     var didTapApply = PassthroughSubject<Void, Never>()
+    
     private var subscriptions = Set<AnyCancellable>()
     private let shiftApplicationVATFlow = ShiftApplicationVATFlow()
     

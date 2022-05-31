@@ -12,12 +12,12 @@ class JobDetailViewModel {
     var jobId: String
     var didTapApply = PassthroughSubject<Void, Never>()
     private var subscriptions = Set<AnyCancellable>()
-
+    private let jobDetailFlow = JobDetailFlow()
+    
     init(jobId: String){
         self.jobId = jobId
-        didTapApply.sink { _ in
-            let screen = Screen.shiftApplicationSkills(shiftId: "fakeShiftId")
-            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbededInNavigation: true))
+        didTapApply.sink { [weak self] _ in
+            self?.jobDetailFlow.navigate(to: .shiftApplicationSkills)
         }.store(in: &subscriptions)
     }
 }

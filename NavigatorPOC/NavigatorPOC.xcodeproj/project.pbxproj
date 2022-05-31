@@ -40,6 +40,9 @@
 		C2DA9C4028450EE500325D5D /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3F28450EE500325D5D /* ProfileFlow.swift */; };
 		C2DA9C422845FC8300325D5D /* ShiftApplicationVATFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C412845FC8300325D5D /* ShiftApplicationVATFlow.swift */; };
 		C2DA9C442846145700325D5D /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C432846145700325D5D /* Destination.swift */; };
+		C2DA9C492846557100325D5D /* JobDetailFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C482846557100325D5D /* JobDetailFlow.swift */; };
+		C2DA9C4B2846566200325D5D /* ShiftApplicationSkillsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C4A2846566200325D5D /* ShiftApplicationSkillsFlow.swift */; };
+		C2DA9C4D284656F500325D5D /* ShiftOverviewFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C4C284656F500325D5D /* ShiftOverviewFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		C2DA9C3F28450EE500325D5D /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
 		C2DA9C412845FC8300325D5D /* ShiftApplicationVATFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationVATFlow.swift; sourceTree = "<group>"; };
 		C2DA9C432846145700325D5D /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		C2DA9C482846557100325D5D /* JobDetailFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailFlow.swift; sourceTree = "<group>"; };
+		C2DA9C4A2846566200325D5D /* ShiftApplicationSkillsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsFlow.swift; sourceTree = "<group>"; };
+		C2DA9C4C284656F500325D5D /* ShiftOverviewFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftOverviewFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +225,7 @@
 		C2DA9C232841265E00325D5D /* ShiftOverview */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C4C284656F500325D5D /* ShiftOverviewFlow.swift */,
 				C2DA9C242841267D00325D5D /* ShiftOverviewViewController.swift */,
 				C2DA9C262841268A00325D5D /* ShiftOverviewViewModel.swift */,
 			);
@@ -238,6 +245,7 @@
 		C2DA9C2D2841272700325D5D /* JobDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C482846557100325D5D /* JobDetailFlow.swift */,
 				C2DA9C302841275100325D5D /* JobDetailViewController.swift */,
 				C2DA9C2E2841274100325D5D /* JobDetailViewModel.swift */,
 			);
@@ -257,6 +265,7 @@
 		C2DA9C37284127D000325D5D /* ShiftApplicationSkills */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C4A2846566200325D5D /* ShiftApplicationSkillsFlow.swift */,
 				C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */,
 				C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */,
 			);
@@ -436,6 +445,7 @@
 				5FB2C4962830FA6F00A87AA2 /* AppEnvironment.swift in Sources */,
 				C2DA9C3D2844C66100325D5D /* Navigator+ViewContex.swift in Sources */,
 				C2DA9C252841267D00325D5D /* ShiftOverviewViewController.swift in Sources */,
+				C2DA9C4D284656F500325D5D /* ShiftOverviewFlow.swift in Sources */,
 				C2DA9C39284127E300325D5D /* ShiftApplicationSkillsViewModel.swift in Sources */,
 				C2DA9C422845FC8300325D5D /* ShiftApplicationVATFlow.swift in Sources */,
 				C2DA9C2F2841274100325D5D /* JobDetailViewModel.swift in Sources */,
@@ -445,6 +455,7 @@
 				5F158865282F9C6A00FBF2EA /* Navigation.swift in Sources */,
 				C2DA9C312841275100325D5D /* JobDetailViewController.swift in Sources */,
 				C2DA9C2C284126D500325D5D /* ProfileViewController.swift in Sources */,
+				C2DA9C4B2846566200325D5D /* ShiftApplicationSkillsFlow.swift in Sources */,
 				5F158821282E896A00FBF2EA /* AppDelegate.swift in Sources */,
 				C2DA9C272841268A00325D5D /* ShiftOverviewViewModel.swift in Sources */,
 				C2DA9C442846145700325D5D /* Destination.swift in Sources */,
@@ -452,6 +463,7 @@
 				C2DA9C2A284126CB00325D5D /* ProfileViewModel.swift in Sources */,
 				C2DA9C22284125B700325D5D /* OnboardingViewModel.swift in Sources */,
 				C2DA9C36284127A600325D5D /* ShiftApplicationVATViewController.swift in Sources */,
+				C2DA9C492846557100325D5D /* JobDetailFlow.swift in Sources */,
 				5F158823282E896A00FBF2EA /* SceneDelegate.swift in Sources */,
 				C2DA9C342841279D00325D5D /* ShiftApplicationVATViewModel.swift in Sources */,
 				5F43AA0828325CD800851279 /* OnboardingFlow.swift in Sources */,

@@ -8,9 +8,7 @@
 import Foundation
 
 class ShiftApplicationVATFlow: Destination {
-    var navigator: Navigator = AppEnvironment.Current.navigator
     
-   
     enum Destination {
         case main
     }

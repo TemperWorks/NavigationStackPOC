@@ -9,15 +9,14 @@ import Foundation
 import Combine
 
 class ShiftApplicationSkillsViewModel {
-    var shiftId: String
     var didTapApply = PassthroughSubject<Void, Never>()
+    
     private var subscriptions = Set<AnyCancellable>()
+    private let shiftApplicationSkillsFlow = ShiftApplicationSkillsFlow()
     
     init(shiftId: String){
-        self.shiftId = shiftId
-        didTapApply.sink { _ in
-            let screen = Screen.shiftApplicationVAT(shiftId: shiftId)
-            AppEnvironment.Current.navigator.handle(navigation:.push(screen))
+        didTapApply.sink { [weak self] _ in
+            self?.shiftApplicationSkillsFlow.navigate(to: .shiftApplicationVAT(id: shiftId))
         }.store(in: &subscriptions)
     }
 }

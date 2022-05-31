@@ -12,11 +12,11 @@ class ShiftOverviewViewModel {
     var didTapShowJobAtIndex = PassthroughSubject<Int, Never>()
     
     private var subscriptions = Set<AnyCancellable>()
+    private let shiftOverviewFlow = ShiftOverviewFlow()
     
     init() {
-        didTapShowJobAtIndex.sink { _ in
-            let screen = Screen.jobDetail(id: "fakeId")
-            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbededInNavigation: true))
+        didTapShowJobAtIndex.sink { [weak self] _ in
+            self?.shiftOverviewFlow.navigate(to: .jobDetail(id: "fakeId"))
         }.store(in: &subscriptions)
     }
 }
