@@ -80,7 +80,7 @@ extension Screen {
         }
     }
     
-    static func shiftOverviewTabBar() -> Self {
+    static func mainTabBar() -> Self {
         return .init {
             let tabBarVC = UITabBarController()
             tabBarVC.viewControllers = [shiftsOverview().viewController(),

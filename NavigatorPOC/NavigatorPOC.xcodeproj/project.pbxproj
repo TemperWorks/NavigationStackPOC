@@ -37,6 +37,9 @@
 		C2DA9C39284127E300325D5D /* ShiftApplicationSkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */; };
 		C2DA9C3B284127ED00325D5D /* ShiftApplicationSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */; };
 		C2DA9C3D2844C66100325D5D /* Navigator+ViewContex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */; };
+		C2DA9C4028450EE500325D5D /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3F28450EE500325D5D /* ProfileFlow.swift */; };
+		C2DA9C422845FC8300325D5D /* ShiftApplicationVATFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C412845FC8300325D5D /* ShiftApplicationVATFlow.swift */; };
+		C2DA9C442846145700325D5D /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C432846145700325D5D /* Destination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsViewModel.swift; sourceTree = "<group>"; };
 		C2DA9C3A284127ED00325D5D /* ShiftApplicationSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsViewController.swift; sourceTree = "<group>"; };
 		C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigator+ViewContex.swift"; sourceTree = "<group>"; };
+		C2DA9C3F28450EE500325D5D /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
+		C2DA9C412845FC8300325D5D /* ShiftApplicationVATFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationVATFlow.swift; sourceTree = "<group>"; };
+		C2DA9C432846145700325D5D /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +156,6 @@
 				5F15882B282E896C00FBF2EA /* LaunchScreen.storyboard */,
 				5F15882E282E896C00FBF2EA /* Info.plist */,
 				5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */,
-				5F43AA0728325CD800851279 /* OnboardingFlow.swift */,
 			);
 			path = NavigatorPOC;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		5F158863282F9C6000FBF2EA /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C432846145700325D5D /* Destination.swift */,
 				5F158864282F9C6A00FBF2EA /* Navigation.swift */,
 				5F158866282F9DC500FBF2EA /* Navigator.swift */,
 				C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */,
@@ -209,6 +215,7 @@
 		C2DA9C1E2841257F00325D5D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				5F43AA0728325CD800851279 /* OnboardingFlow.swift */,
 				C2DA9C1F284125A300325D5D /* OnboardingViewController.swift */,
 				C2DA9C21284125B700325D5D /* OnboardingViewModel.swift */,
 			);
@@ -227,6 +234,7 @@
 		C2DA9C28284126BA00325D5D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C3F28450EE500325D5D /* ProfileFlow.swift */,
 				C2DA9C2B284126D500325D5D /* ProfileViewController.swift */,
 				C2DA9C29284126CB00325D5D /* ProfileViewModel.swift */,
 			);
@@ -245,6 +253,7 @@
 		C2DA9C322841278600325D5D /* ShiftApplicationVAT */ = {
 			isa = PBXGroup;
 			children = (
+				C2DA9C412845FC8300325D5D /* ShiftApplicationVATFlow.swift */,
 				C2DA9C35284127A600325D5D /* ShiftApplicationVATViewController.swift */,
 				C2DA9C332841279D00325D5D /* ShiftApplicationVATViewModel.swift */,
 			);
@@ -404,6 +413,7 @@
 				C2DA9C3D2844C66100325D5D /* Navigator+ViewContex.swift in Sources */,
 				C2DA9C252841267D00325D5D /* ShiftOverviewViewController.swift in Sources */,
 				C2DA9C39284127E300325D5D /* ShiftApplicationSkillsViewModel.swift in Sources */,
+				C2DA9C422845FC8300325D5D /* ShiftApplicationVATFlow.swift in Sources */,
 				C2DA9C2F2841274100325D5D /* JobDetailViewModel.swift in Sources */,
 				5FB2C4982830FA8D00A87AA2 /* Environment.swift in Sources */,
 				C2DA9C3B284127ED00325D5D /* ShiftApplicationSkillsViewController.swift in Sources */,
@@ -413,6 +423,8 @@
 				C2DA9C2C284126D500325D5D /* ProfileViewController.swift in Sources */,
 				5F158821282E896A00FBF2EA /* AppDelegate.swift in Sources */,
 				C2DA9C272841268A00325D5D /* ShiftOverviewViewModel.swift in Sources */,
+				C2DA9C442846145700325D5D /* Destination.swift in Sources */,
+				C2DA9C4028450EE500325D5D /* ProfileFlow.swift in Sources */,
 				C2DA9C2A284126CB00325D5D /* ProfileViewModel.swift in Sources */,
 				C2DA9C22284125B700325D5D /* OnboardingViewModel.swift in Sources */,
 				C2DA9C36284127A600325D5D /* ShiftApplicationVATViewController.swift in Sources */,

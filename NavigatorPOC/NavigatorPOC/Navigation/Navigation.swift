@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public enum Navigation {
-    case root(Screen)
+    case root(Screen, isEmbededInNavigation: Bool = false)
     case tab(Int)
     case push(Screen)
     case modal(

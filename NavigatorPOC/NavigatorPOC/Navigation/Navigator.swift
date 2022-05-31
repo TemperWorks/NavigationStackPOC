@@ -45,8 +45,8 @@ open class Navigator: ViewContex {
                     vc,
                     animated: animated
                 )
-            case .root(let screen):
-                let vc = screen.viewController()
+            case .root(let screen, let isEmbededInNavigation):
+                let vc = isEmbededInNavigation ? screen.embededInNavigationController().viewController() : screen.viewController()
                 window.rootViewController = vc
             }
         }

@@ -12,12 +12,12 @@ class ShiftApplicationVATViewModel {
     var shiftId: String
     var didTapApply = PassthroughSubject<Void, Never>()
     private var subscriptions = Set<AnyCancellable>()
+    private let shiftApplicationVATFlow = ShiftApplicationVATFlow()
     
-    init(shiftId: String){
+    init(shiftId: String) {
         self.shiftId = shiftId
-        didTapApply.sink { _ in
-            let screen = Screen.shiftOverviewTabBar()
-            AppEnvironment.Current.navigator.handle(navigation: .root(screen))
+        didTapApply.sink { [weak self] _ in
+            self?.shiftApplicationVATFlow.navigate(to: .main)
         }.store(in: &subscriptions)
     }
 }
