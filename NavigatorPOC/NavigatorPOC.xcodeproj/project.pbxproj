@@ -39,7 +39,7 @@
 		C2DA9C3D2844C66100325D5D /* Navigator+ViewContex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */; };
 		C2DA9C4028450EE500325D5D /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C3F28450EE500325D5D /* ProfileFlow.swift */; };
 		C2DA9C422845FC8300325D5D /* ShiftApplicationVATFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C412845FC8300325D5D /* ShiftApplicationVATFlow.swift */; };
-		C2DA9C442846145700325D5D /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C432846145700325D5D /* Destination.swift */; };
+		C2DA9C442846145700325D5D /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C432846145700325D5D /* Flow.swift */; };
 		C2DA9C492846557100325D5D /* JobDetailFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C482846557100325D5D /* JobDetailFlow.swift */; };
 		C2DA9C4B2846566200325D5D /* ShiftApplicationSkillsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C4A2846566200325D5D /* ShiftApplicationSkillsFlow.swift */; };
 		C2DA9C4D284656F500325D5D /* ShiftOverviewFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9C4C284656F500325D5D /* ShiftOverviewFlow.swift */; };
@@ -97,7 +97,7 @@
 		C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigator+ViewContex.swift"; sourceTree = "<group>"; };
 		C2DA9C3F28450EE500325D5D /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
 		C2DA9C412845FC8300325D5D /* ShiftApplicationVATFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationVATFlow.swift; sourceTree = "<group>"; };
-		C2DA9C432846145700325D5D /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		C2DA9C432846145700325D5D /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		C2DA9C482846557100325D5D /* JobDetailFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailFlow.swift; sourceTree = "<group>"; };
 		C2DA9C4A2846566200325D5D /* ShiftApplicationSkillsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftApplicationSkillsFlow.swift; sourceTree = "<group>"; };
 		C2DA9C4C284656F500325D5D /* ShiftOverviewFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftOverviewFlow.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		5F158863282F9C6000FBF2EA /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				C2DA9C432846145700325D5D /* Destination.swift */,
+				C2DA9C432846145700325D5D /* Flow.swift */,
 				5F158864282F9C6A00FBF2EA /* Navigation.swift */,
 				5F158866282F9DC500FBF2EA /* Navigator.swift */,
 				C2DA9C3C2844C66100325D5D /* Navigator+ViewContex.swift */,
@@ -458,7 +458,7 @@
 				C2DA9C4B2846566200325D5D /* ShiftApplicationSkillsFlow.swift in Sources */,
 				5F158821282E896A00FBF2EA /* AppDelegate.swift in Sources */,
 				C2DA9C272841268A00325D5D /* ShiftOverviewViewModel.swift in Sources */,
-				C2DA9C442846145700325D5D /* Destination.swift in Sources */,
+				C2DA9C442846145700325D5D /* Flow.swift in Sources */,
 				C2DA9C4028450EE500325D5D /* ProfileFlow.swift in Sources */,
 				C2DA9C2A284126CB00325D5D /* ProfileViewModel.swift in Sources */,
 				C2DA9C22284125B700325D5D /* OnboardingViewModel.swift in Sources */,

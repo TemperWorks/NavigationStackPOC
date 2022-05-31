@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JobDetailFlow: Destination {
+struct JobDetailFlow: Flow {
     
     enum Destination {
         case shiftApplicationSkills

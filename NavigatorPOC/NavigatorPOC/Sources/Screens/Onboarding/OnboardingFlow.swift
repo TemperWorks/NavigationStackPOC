@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public struct OnboardingFlow: Destination {
+public struct OnboardingFlow: Flow {
     
     /// Define a set of supported destinations for Onboarding.
     enum Destination {

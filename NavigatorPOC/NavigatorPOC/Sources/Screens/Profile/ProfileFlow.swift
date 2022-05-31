@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileFlow: Destination {
+class ProfileFlow: Flow {
    
     enum Destination {
         case logout

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ShiftOverviewFlow: Destination {
+class ShiftOverviewFlow: Flow {
     
     enum Destination {
         case jobDetail(id: String)

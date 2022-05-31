@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Destination {
+protocol Flow {
     associatedtype Destination
     func navigate(to destination: Destination)
 }

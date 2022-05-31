@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ShiftApplicationVATFlow: Destination {
+class ShiftApplicationVATFlow: Flow {
     
     enum Destination {
         case main

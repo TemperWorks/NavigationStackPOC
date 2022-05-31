@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShiftApplicationSkillsFlow: Destination {
+struct ShiftApplicationSkillsFlow: Flow {
     
     enum Destination {
         case shiftApplicationVAT(id: String)
