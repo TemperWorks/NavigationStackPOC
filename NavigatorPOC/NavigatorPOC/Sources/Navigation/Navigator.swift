@@ -25,6 +25,7 @@ open class Navigator: ViewContex {
         
         DispatchQueue.main.async {
             switch navigation {
+            
             case .tab(let index):
                 self.tabBarController?.selectedIndex = index
                 
@@ -45,6 +46,7 @@ open class Navigator: ViewContex {
                     vc,
                     animated: animated
                 )
+                
             case .root(let screen, let isEmbededInNavigation):
                 let vc = isEmbededInNavigation ? screen.embededInNavigationController().viewController() : screen.viewController()
                 window.rootViewController = vc
