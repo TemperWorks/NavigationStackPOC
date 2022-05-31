@@ -147,15 +147,10 @@
 		5F15881F282E896A00FBF2EA /* NavigatorPOC */ = {
 			isa = PBXGroup;
 			children = (
-				C2DA9C1D2841257000325D5D /* Screens */,
-				C2DA9C1C2841244000325D5D /* Environment */,
-				5F158863282F9C6000FBF2EA /* Navigation */,
-				5F158820282E896A00FBF2EA /* AppDelegate.swift */,
-				5F158822282E896A00FBF2EA /* SceneDelegate.swift */,
+				C2DA9C4628463DF200325D5D /* Sources */,
+				5F15882E282E896C00FBF2EA /* Info.plist */,
 				5F158829282E896C00FBF2EA /* Assets.xcassets */,
 				5F15882B282E896C00FBF2EA /* LaunchScreen.storyboard */,
-				5F15882E282E896C00FBF2EA /* Info.plist */,
-				5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */,
 			);
 			path = NavigatorPOC;
 			sourceTree = "<group>";
@@ -202,6 +197,7 @@
 		C2DA9C1D2841257000325D5D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */,
 				C2DA9C2D2841272700325D5D /* JobDetail */,
 				C2DA9C1E2841257F00325D5D /* Onboarding */,
 				C2DA9C28284126BA00325D5D /* Profile */,
@@ -267,6 +263,26 @@
 				C2DA9C38284127E300325D5D /* ShiftApplicationSkillsViewModel.swift */,
 			);
 			path = ShiftApplicationSkills;
+			sourceTree = "<group>";
+		};
+		C2DA9C4528463DC800325D5D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5F158820282E896A00FBF2EA /* AppDelegate.swift */,
+				5F158822282E896A00FBF2EA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C2DA9C4628463DF200325D5D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA9C4528463DC800325D5D /* App */,
+				C2DA9C1C2841244000325D5D /* Environment */,
+				5F158863282F9C6000FBF2EA /* Navigation */,
+				C2DA9C1D2841257000325D5D /* Screens */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
