@@ -1,5 +1,5 @@
 //
-//  Navigator+ViewContex.swift
+//  Navigator+ViewContext.swift
 //  NavigatorPOC
 //
 //  Created by Goktug Aral on 30/05/2022.
@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-protocol ViewContex {
+protocol ViewContext {
     var topMostViewController: UIViewController? { get }
     var tabBarController: UITabBarController? { get }
     var currentNavigationController: UINavigationController? { get }
 }
 
-extension ViewContex where Self: Navigator {
+extension ViewContext where Self: Navigator {
     var topMostViewController: UIViewController? {
         return window?.rootViewController?.topMostViewController
     }

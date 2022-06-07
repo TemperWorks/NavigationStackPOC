@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-open class Navigator: ViewContex {
+open class Navigator: ViewContext {
     
     public weak var window: UIWindow?
     
@@ -28,9 +28,9 @@ open class Navigator: ViewContex {
             case .tab(let index):
                 self.tabBarController?.selectedIndex = index
                 
-            case .modal(let screen, let presentationStyle, let isEmbededInNavigation, let completion):
+            case .modal(let screen, let presentationStyle, let isEmbeddedInNavigation, let completion):
                 
-                let vc = isEmbededInNavigation ? screen.embededInNavigationController().viewController() : screen.viewController()
+                let vc = isEmbeddedInNavigation ? screen.embeddedInNavigationController().viewController() : screen.viewController()
                 
                 vc.modalPresentationStyle = presentationStyle
                 self.topMostViewController?.present(
@@ -55,7 +55,7 @@ open class Navigator: ViewContex {
 
 fileprivate extension Screen {
     
-    func embededInNavigationController() -> Screen {
+    func embeddedInNavigationController() -> Screen {
         return .init {
             let vc = self.viewController()
             return UINavigationController(rootViewController: vc)

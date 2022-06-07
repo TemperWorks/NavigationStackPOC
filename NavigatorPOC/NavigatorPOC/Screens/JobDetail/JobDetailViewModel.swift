@@ -17,7 +17,7 @@ class JobDetailViewModel {
         self.jobId = jobId
         didTapApply.sink { _ in
             let screen = Screen.shiftApplicationSkills(shiftId: "fakeShiftId")
-            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbededInNavigation: true))
+            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbeddedInNavigation: true))
         }.store(in: &subscriptions)
     }
 }

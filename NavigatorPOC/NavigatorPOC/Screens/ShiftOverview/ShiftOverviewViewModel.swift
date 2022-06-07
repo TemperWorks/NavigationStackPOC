@@ -16,7 +16,7 @@ class ShiftOverviewViewModel {
     init() {
         didTapShowJobAtIndex.sink { _ in
             let screen = Screen.jobDetail(id: "fakeId")
-            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbededInNavigation: true))
+            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbeddedInNavigation: true))
         }.store(in: &subscriptions)
     }
 }
