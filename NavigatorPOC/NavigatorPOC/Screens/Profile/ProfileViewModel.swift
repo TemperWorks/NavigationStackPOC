@@ -8,19 +8,22 @@
 import Foundation
 import Combine
 
-class ProfileViewModel {
+public class ProfileViewModel {
     var didTapLogout = PassthroughSubject<Int, Never>()
     
     private var subscriptions = Set<AnyCancellable>()
-    private var onboardingFlow: OnboardingFlow
     
-    init(onboardingFlow: OnboardingFlow = .development) {
-        self.onboardingFlow = onboardingFlow
-        
+    init() {
         didTapLogout.sink { _ in
-            onboardingFlow.simulateLogout()
-            let navigation = onboardingFlow.getFirstNavigation()
-            AppEnvironment.Current.navigator.handle(navigation: navigation)
+			AppEnvironment.Current.session.value = nil
         }.store(in: &subscriptions)
     }
+}
+
+import UIKit
+
+extension ProfileViewModel: Screen {
+	public func viewController() -> UIViewController {
+		ProfileViewController(viewModel: self)
+	}
 }

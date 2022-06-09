@@ -9,14 +9,21 @@ import Foundation
 import Combine
 
 class ShiftOverviewViewModel {
+	
     var didTapShowJobAtIndex = PassthroughSubject<Int, Never>()
-    
     private var subscriptions = Set<AnyCancellable>()
     
-    init() {
+	init(showJobHandler: @escaping (String) -> ()) {
         didTapShowJobAtIndex.sink { _ in
-            let screen = Screen.jobDetail(id: "fakeId")
-            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbeddedInNavigation: true))
+            showJobHandler("fakeId")
         }.store(in: &subscriptions)
     }
+}
+
+import UIKit
+
+extension ShiftOverviewViewModel: Screen {
+	func viewController() -> UIViewController {
+		ShiftOverviewViewController(viewModel: self)
+	}
 }

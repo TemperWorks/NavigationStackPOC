@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class OnboardingViewController: UIViewController {
-    
+	
     lazy var button: UIButton = {
         let button = UIButton()
         button.setTitle("Next Screen", for: .normal)
@@ -34,7 +34,6 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = String(describing: type(of: self).self)
         self.navigationController?.isNavigationBarHidden = false
         setUp()
     }

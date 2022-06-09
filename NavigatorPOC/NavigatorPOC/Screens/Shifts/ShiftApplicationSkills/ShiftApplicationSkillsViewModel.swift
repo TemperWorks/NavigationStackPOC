@@ -1,5 +1,5 @@
 //
-//  ShiftApplicationVATViewModel.swift
+//  ShiftApplicationSkillsViewModel.swift
 //  NavigatorPOC
 //
 //  Created by Goktug Aral on 27/05/2022.
@@ -8,16 +8,23 @@
 import Foundation
 import Combine
 
-class ShiftApplicationVATViewModel {
+class ShiftApplicationSkillsViewModel {
     var shiftId: String
     var didTapApply = PassthroughSubject<Void, Never>()
     private var subscriptions = Set<AnyCancellable>()
     
-    init(shiftId: String){
+	init(shiftId: String, applyHandler: @escaping (String) -> ()){
         self.shiftId = shiftId
         didTapApply.sink { _ in
-            let screen = Screen.shiftOverviewTabBar()
-            AppEnvironment.Current.navigator.handle(navigation: .root(screen))
+			applyHandler(shiftId)
         }.store(in: &subscriptions)
     }
+}
+
+import UIKit
+
+extension ShiftApplicationSkillsViewModel: Screen {
+	func viewController() -> UIViewController {
+		ShiftApplicationSkillsViewController(viewModel: self)
+	}
 }

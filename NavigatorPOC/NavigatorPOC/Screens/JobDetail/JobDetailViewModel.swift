@@ -13,11 +13,18 @@ class JobDetailViewModel {
     var didTapApply = PassthroughSubject<Void, Never>()
     private var subscriptions = Set<AnyCancellable>()
 
-    init(jobId: String){
+	init(jobId: String, startApplicationHandler: @escaping (String) -> ()) {
         self.jobId = jobId
         didTapApply.sink { _ in
-            let screen = Screen.shiftApplicationSkills(shiftId: "fakeShiftId")
-            AppEnvironment.Current.navigator.handle(navigation: .modal(screen, isEmbeddedInNavigation: true))
+			startApplicationHandler(jobId)
         }.store(in: &subscriptions)
     }
+}
+
+import UIKit
+
+extension JobDetailViewModel: Screen {
+	func viewController() -> UIViewController {
+		JobDetailViewController(viewModel: self)
+	}
 }

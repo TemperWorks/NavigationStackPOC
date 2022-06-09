@@ -8,95 +8,72 @@
 import Foundation
 import UIKit
 
-public struct OnboardingFlow {
-    
-    var getMissingStep: () -> String?
-    
-    public init(getMissingStep: @escaping () -> String?) {
-        self.getMissingStep = getMissingStep
-    }
-    
-    // This is to mock the service behaviour
-    private static var missingSteps = ["email", "password", "phone", "id_verification"]
-    
-    func simulateLogout() {
-        OnboardingFlow.missingSteps = ["email", "password", "phone", "id_verification"]
-    }
-    
-    func simulateCompletion() {
-        OnboardingFlow.missingSteps.removeAll()
-    }
-    
-    private func getNextScreen() -> Screen? {
-        let step =  getMissingStep()
-        
-        switch step {
-        case "email":
-            return .email()
-            
-        case "password":
-            return .password()
-            
-        case "phone":
-            return .phone()
-            
-        case "id_verification":
-            return .idVerification()
-        default:
-            return nil
-        }
-    }
-    
-    /// Picks the next screen based on missing steps and embeds it in a `UINavigationViewController`
-    ///
-    /// - Returns: The first `Navigation` object for this flow
-    func getFirstNavigation() -> Navigation {
-        guard let nextScreen = getNextScreen() else {
-            let screen = Screen.shiftOverviewTabBar()
-            return .root(screen)
-        }
-        
-        let navigation = Screen.init{
-            let vc = nextScreen.viewController()
-            let navigationController = UINavigationController(rootViewController: vc)
-            return navigationController
-        }
-        
-        return .root(navigation)
-    }
-    
-    /// Picks the next screen based on the missing steps
-    ///
-    /// - Returns the next `Navigation` for this flow
-    ///     * Push for onboarding screens
-    ///     * Roor for the shift overview
-    func getNextNavigation() -> Navigation {
-        guard let nextScreen =  getNextScreen() else {
-            let screen = Screen.shiftOverviewTabBar()
-            return .root(screen)
-        }
-        
-        return .push(nextScreen)
-    }
+public class OnboardingFlow: Navigator {
+	
+	private var cancellables = Set<AnyCancellable>()
+	
+	func start() {
+		handleNextNavigation()
+	}
+	
+	func handleNextNavigation() {
+		FakeProfileResource(missingStep: nextMissingStep())
+			.get
+			.sink { [weak self] result in
+				guard let self = self else { return }
+				if case .failure(let error) = result {
+					let nextViewModel = self.viewModel(for: error)
+					self.handle(navigation: .push(nextViewModel))
+				}
+			} receiveValue: { _ in
+				AppEnvironment.Current.session.value = .init()
+			}
+			.store(in: &cancellables)
+	}
+	
+	func viewModel(for missingStep: MissingStepError) -> OnboardingViewModel {
+		switch missingStep {
+			case .email:
+				return .init(title: "Email", nextHandler: handleNextNavigation)
+			case .password:
+				return .init(title: "Password", nextHandler: handleNextNavigation)
+			case .phone:
+				return .init(title: "Phone number", nextHandler: handleNextNavigation)
+			case .idVerification:
+				return .init(title: "ID Verification", nextHandler: handleNextNavigation)
+		}
+	}
 }
 
-extension OnboardingFlow {
-    
-    public static let live = Self {
-        return "Something returned from backend"
-    }
-    
-    public static let development = Self {
-        if let step = OnboardingFlow.missingSteps.first {
-            OnboardingFlow.missingSteps.removeFirst()
-            return step
-        }
-        
-        return nil
-    }
-    
-    public static let alwaysCompleted = Self {
-        return nil
-    }
+import Combine
 
+struct FakeProfileResource {
+	let missingStep: MissingStepError?
+	var get: Future<Bool, MissingStepError> {
+		.init { promise in
+			DispatchQueue.main.async {
+				if let missingStep = missingStep {
+					promise(.failure(missingStep))
+				} else {
+					promise(.success(true))
+				}
+			}
+		}
+	}
+}
+
+public enum MissingStepError: String, Error {
+	case email, password, phone, idVerification
+}
+
+// Free functions for simulation purposes.
+var missingSteps: [MissingStepError] = [.email, .password, .phone, .idVerification]
+func nextMissingStep() -> MissingStepError? {
+	missingSteps.isEmpty ? nil : missingSteps.removeFirst()
+}
+func simulateLogout() {
+	missingSteps = [.email, .password, .phone, .idVerification]
+}
+func simulateLogIn() {
+	missingSteps = []
 }

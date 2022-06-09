@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+	var appNavigator: AppNavigator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -19,12 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.makeKeyAndVisible()
-        
-        AppEnvironment.Current.navigator.configure(with: window)
-        
-        let navigation = OnboardingFlow.development.getFirstNavigation()
-        AppEnvironment.Current.navigator.handle(navigation: navigation)
-        
+		
+		window.rootViewController = SplashViewController()
+		appNavigator = AppNavigator(window: window)
+		
+		AppEnvironment.Current.session.value = nil
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

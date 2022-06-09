@@ -6,10 +6,10 @@
 //
 
 import Foundation
+import Combine
+
 public struct Environment {
-    public var navigator: Navigator
-    
-    public init(navigator: Navigator = Navigator()) {
-        self.navigator = navigator
-    }
+	public var session: CurrentValueSubject<Session?, Never> = .init(nil)
 }
+
+public struct Session {}

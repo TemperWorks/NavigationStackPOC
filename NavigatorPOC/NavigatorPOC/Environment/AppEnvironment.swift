@@ -7,5 +7,5 @@
 
 import Foundation
 public struct AppEnvironment {
-    public static var Current = Environment()
+	public static var Current: Environment = .init()
 }

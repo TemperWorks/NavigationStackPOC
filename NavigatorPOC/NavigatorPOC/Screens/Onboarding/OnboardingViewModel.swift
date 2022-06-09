@@ -7,18 +7,27 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class OnboardingViewModel {
+	
     var didTapNext = PassthroughSubject<Void, Never>()
-    private var subscriptions = Set<AnyCancellable>()
-    private var onboardingFlow: OnboardingFlow
+    private var cancellables = Set<AnyCancellable>()
     
-    init(onboardingFlow: OnboardingFlow = .development) {
-        self.onboardingFlow = onboardingFlow
-        
+	let title: String
+	
+	init(title: String, nextHandler: @escaping () -> Void) {
+		self.title = title
         didTapNext.sink { _ in
-            let nextNavigation = onboardingFlow.getNextNavigation()
-            AppEnvironment.Current.navigator.handle(navigation: nextNavigation)
-        }.store(in: &subscriptions)
+            nextHandler()
+        }.store(in: &cancellables)
     }
+}
+
+extension OnboardingViewModel: Screen {
+	func viewController() -> UIViewController {
+		let result = OnboardingViewController(viewModel: self)
+		result.title = title
+		return result
+	}
 }

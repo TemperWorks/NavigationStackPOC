@@ -10,9 +10,9 @@ import NavigatorPOC
 
 class NavigatorSpy: Navigator {
 
-    var handledNavigation: Navigation?
+    var handledNavigation: Destination?
     
-    override func handle(navigation: Navigation, animated: Bool = true) {
+    override func handle(navigation: Destination, animated: Bool = true) {
         handledNavigation = navigation
     }
 }

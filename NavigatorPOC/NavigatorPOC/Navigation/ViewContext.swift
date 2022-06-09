@@ -1,30 +1,24 @@
-//
-//  Navigator+ViewContext.swift
-//  NavigatorPOC
-//
-//  Created by Goktug Aral on 30/05/2022.
-//
-
-import Foundation
 import UIKit
 
 protocol ViewContext {
+	var rootViewController: UIViewController { get }
     var topMostViewController: UIViewController? { get }
     var tabBarController: UITabBarController? { get }
     var currentNavigationController: UINavigationController? { get }
 }
 
-extension ViewContext where Self: Navigator {
+extension ViewContext {
+	
     var topMostViewController: UIViewController? {
-        return window?.rootViewController?.topMostViewController
+        return rootViewController.topMostViewController
     }
     
     var tabBarController: UITabBarController? {
-        return window?.rootViewController?.tabBarController
+        return rootViewController.tabBarController
     }
     
     var currentNavigationController: UINavigationController? {
-        return window?.rootViewController?.currentNavigationController
+        return rootViewController.currentNavigationController
     }
 }
 

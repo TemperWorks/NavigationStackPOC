@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public enum Navigation {
+public enum Destination {
     case root(Screen)
     case tab(Int)
     case push(Screen)
@@ -18,8 +18,4 @@ public enum Navigation {
         isEmbeddedInNavigation: Bool = false,
         completion: (() -> Void)? = nil
     )
-}
-
-public struct Screen {
-    let viewController: () -> UIViewController
 }
