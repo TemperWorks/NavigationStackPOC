@@ -16,10 +16,19 @@ class OnboardingViewModel {
     
 	let title: String
 	
-	init(title: String, nextHandler: @escaping () -> Void) {
+	init(title: String, nextHandler: @escaping (MissingStepError?) -> Void) {
 		self.title = title
         didTapNext.sink { _ in
-            nextHandler()
+			FakeProfileResource(missingStep: nextMissingStep())
+				.get
+				.sink { result in
+					if case .failure(let error) = result {
+						nextHandler(error)
+					}
+				} receiveValue: { _ in
+					AppEnvironment.Current.session.value = .init()
+					nextHandler(nil)
+				}.store(in: &self.cancellables)
         }.store(in: &cancellables)
     }
 }

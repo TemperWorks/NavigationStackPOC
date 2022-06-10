@@ -12,7 +12,7 @@ public class ProfileViewModel {
     var didTapLogout = PassthroughSubject<Int, Never>()
     
     private var subscriptions = Set<AnyCancellable>()
-    
+ 
     init() {
         didTapLogout.sink { _ in
 			AppEnvironment.Current.session.value = nil

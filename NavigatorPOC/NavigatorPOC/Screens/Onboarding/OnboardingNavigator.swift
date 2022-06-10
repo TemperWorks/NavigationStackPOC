@@ -8,27 +8,25 @@
 import Foundation
 import UIKit
 
-public class OnboardingFlow: Navigator {
+public class OnboardingNavigator: Navigator {
 	
-	private var cancellables = Set<AnyCancellable>()
+	var initialMissingStep: MissingStepError
+	var viewModels: [OnboardingViewModel] = []
 	
-	func start() {
-		handleNextNavigation()
+	public required init(missingStep: MissingStepError, rootViewController: UIViewController) {
+		self.initialMissingStep = missingStep
+		super.init(rootViewController)
 	}
 	
-	func handleNextNavigation() {
-		FakeProfileResource(missingStep: nextMissingStep())
-			.get
-			.sink { [weak self] result in
-				guard let self = self else { return }
-				if case .failure(let error) = result {
-					let nextViewModel = self.viewModel(for: error)
-					self.handle(navigation: .push(nextViewModel))
-				}
-			} receiveValue: { _ in
-				AppEnvironment.Current.session.value = .init()
-			}
-			.store(in: &cancellables)
+	func start() {
+		handleNextNavigation(missingStep: initialMissingStep)
+	}
+	
+	func handleNextNavigation(missingStep: MissingStepError?) {
+		guard let missingStep = missingStep else { return }
+		let nextViewModel = self.viewModel(for: missingStep)
+		self.viewModels.append(nextViewModel)
+		self.handle(navigation: .push(nextViewModel))
 	}
 	
 	func viewModel(for missingStep: MissingStepError) -> OnboardingViewModel {

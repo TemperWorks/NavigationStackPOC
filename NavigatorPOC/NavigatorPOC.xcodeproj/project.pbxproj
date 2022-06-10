@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2307B29A285342C80088AE82 /* ShiftsNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307B299285342C80088AE82 /* ShiftsNavigatorTests.swift */; };
 		239751142850D17F007ECCCF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239751132850D17F007ECCCF /* SplashViewController.swift */; };
 		239751162850D20D007ECCCF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239751152850D20D007ECCCF /* Helpers.swift */; };
 		239751182850D293007ECCCF /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239751172850D293007ECCCF /* AppNavigator.swift */; };
@@ -24,9 +25,7 @@
 		5F158860282F7EF200FBF2EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F15885F282F7EF200FBF2EA /* SnapKit */; };
 		5F158865282F9C6A00FBF2EA /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F158864282F9C6A00FBF2EA /* Destination.swift */; };
 		5F158867282F9DC500FBF2EA /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F158866282F9DC500FBF2EA /* Navigator.swift */; };
-		5F43AA0828325CD800851279 /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F43AA0728325CD800851279 /* OnboardingFlow.swift */; };
-		5F43AA0C2833876400851279 /* OnboardingFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F43AA0B2833876400851279 /* OnboardingFlowTests.swift */; };
-		5F43AA0E283388D200851279 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F43AA0D283388D200851279 /* NavigatorSpy.swift */; };
+		5F43AA0828325CD800851279 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F43AA0728325CD800851279 /* OnboardingNavigator.swift */; };
 		5F43AA1428338DB500851279 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 5F43AA1328338DB500851279 /* SnapshotTesting */; };
 		5FB2C4962830FA6F00A87AA2 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */; };
 		5FB2C4982830FA8D00A87AA2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2C4972830FA8D00A87AA2 /* Environment.swift */; };
@@ -62,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2307B299285342C80088AE82 /* ShiftsNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsNavigatorTests.swift; sourceTree = "<group>"; };
 		239751132850D17F007ECCCF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		239751152850D20D007ECCCF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		239751172850D293007ECCCF /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
@@ -82,9 +82,7 @@
 		5F158843282E896C00FBF2EA /* NavigatorPOCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorPOCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5F158864282F9C6A00FBF2EA /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		5F158866282F9DC500FBF2EA /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
-		5F43AA0728325CD800851279 /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
-		5F43AA0B2833876400851279 /* OnboardingFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowTests.swift; sourceTree = "<group>"; };
-		5F43AA0D283388D200851279 /* NavigatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
+		5F43AA0728325CD800851279 /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
 		5FB2C4952830FA6F00A87AA2 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		5FB2C4972830FA8D00A87AA2 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5FB2C499283119EA00A87AA2 /* Screen+ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Screen+ViewControllers.swift"; sourceTree = "<group>"; };
@@ -200,8 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				5F158837282E896C00FBF2EA /* NavigatorPOCTests.swift */,
-				5F43AA0B2833876400851279 /* OnboardingFlowTests.swift */,
-				5F43AA0D283388D200851279 /* NavigatorSpy.swift */,
+				2307B299285342C80088AE82 /* ShiftsNavigatorTests.swift */,
 			);
 			path = NavigatorPOCTests;
 			sourceTree = "<group>";
@@ -249,7 +246,7 @@
 		C2DA9C1E2841257F00325D5D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				5F43AA0728325CD800851279 /* OnboardingFlow.swift */,
+				5F43AA0728325CD800851279 /* OnboardingNavigator.swift */,
 				C2DA9C21284125B700325D5D /* OnboardingViewModel.swift */,
 				C2DA9C1F284125A300325D5D /* OnboardingViewController.swift */,
 			);
@@ -453,7 +450,7 @@
 				5F158823282E896A00FBF2EA /* SceneDelegate.swift in Sources */,
 				C2DA9C342841279D00325D5D /* ShiftApplicationVATViewModel.swift in Sources */,
 				2397511F2850E1A9007ECCCF /* Screen.swift in Sources */,
-				5F43AA0828325CD800851279 /* OnboardingFlow.swift in Sources */,
+				5F43AA0828325CD800851279 /* OnboardingNavigator.swift in Sources */,
 				C2DA9C20284125A300325D5D /* OnboardingViewController.swift in Sources */,
 				5FB2C49A283119EA00A87AA2 /* Screen+ViewControllers.swift in Sources */,
 				239751142850D17F007ECCCF /* SplashViewController.swift in Sources */,
@@ -465,8 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F43AA0E283388D200851279 /* NavigatorSpy.swift in Sources */,
-				5F43AA0C2833876400851279 /* OnboardingFlowTests.swift in Sources */,
+				2307B29A285342C80088AE82 /* ShiftsNavigatorTests.swift in Sources */,
 				5F158838282E896C00FBF2EA /* NavigatorPOCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

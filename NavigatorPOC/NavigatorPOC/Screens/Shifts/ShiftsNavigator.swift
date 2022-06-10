@@ -35,4 +35,13 @@ public final class ShiftsNavigator: Navigator {
 	func finishApplication(id: String) {
 		self.rootViewController.dismiss(animated: true)
 	}
+	
+	func finish() {
+		if jobDetail != nil {
+			rootViewController.dismiss(animated: true)
+		}
+		jobDetail = nil
+		shiftApplicationSkills = nil
+		shiftsApplicationVAT = nil
+	}
 }
